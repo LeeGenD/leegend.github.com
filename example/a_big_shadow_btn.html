@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		hr{
+
+		}
+		.btn1{
+			width: 199px;
+			height: 91px;
+			background: url( ./img/a_big_shadow_btn.png);
+			background-position: 0 -91px;
+		}
+		.btn1 a{
+			position: absolute;
+			width: 152px;
+			height: 45px;
+			left: 24px;
+			top: 24px;
+		}
+		h1 + p{
+			color: red;
+		}
+		.btn2{
+			position: relative;
+		}
+		.btn2 .btn_hover{
+			width: 152px;
+			height: 45px;
+			position: absolute;
+			left: 24px;
+			top: 24px;
+			z-index: 999;
+		}
+		.btn2 .btn_bg{
+			width: 199px;
+			height: 91px;
+			background: url( ./img/a_big_shadow_btn.png);
+			background-position: 0 -91px;
+			position: absolute;
+			top: 0;
+		}
+		.btn2 .btn_hover:hover + div{
+			background-position: 0 -182px;
+		}
+		</style>
+		<script>
+
+		</script>
+	</head>
+	<body>
+		<div class="btn1">
+			<a href="http://www.baidu.com" target="_blank" onmouseenter="this.parentNode.style.backgroundPosition='0 -182px'" onmouseleave="this.parentNode.style.backgroundPosition='0 -91px'"></a>
+		</div>
+		<div class="btn2">
+			<a class="btn_hover" href="http://www.baidu.com" target="_blank"></a>
+			<div class="btn_bg"></div>
+		</div>
+	</body>
+</html>
